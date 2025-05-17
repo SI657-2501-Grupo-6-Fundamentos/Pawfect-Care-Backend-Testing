@@ -1,7 +1,6 @@
 package pe.upc.pawfectcarebackend.petmanagement.domain.model.aggregates;
 
 import jakarta.persistence.Entity;
-import lombok.Builder;
 import lombok.Getter;
 import org.apache.logging.log4j.util.Strings;
 import pe.upc.pawfectcarebackend.petmanagement.domain.model.commands.CreateOwnerCommand;
