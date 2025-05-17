@@ -34,8 +34,7 @@ public class BearerAuthorizationRequestFilter extends OncePerRequestFilter {
     private final UserDetailsService userDetailsService;
 
     public BearerAuthorizationRequestFilter(BearerTokenService tokenService, UserDetailsService userDetailsService) {
-        this.tokenService = tokenService;
-        this.userDetailsService = userDetailsService;
+        this.tokenService = tokenService; this.userDetailsService = userDetailsService;
     }
 
     /**
@@ -45,7 +44,8 @@ public class BearerAuthorizationRequestFilter extends OncePerRequestFilter {
      * @param filterChain The filter chain object.
      */
     @Override
-    protected void doFilterInternal(@NonNull HttpServletRequest request, @NonNull HttpServletResponse response, @NonNull FilterChain filterChain) throws ServletException, IOException {
+    protected void doFilterInternal(@NonNull HttpServletRequest request, @NonNull HttpServletResponse response, @NonNull FilterChain filterChain)
+            throws ServletException, IOException {
         try {
             String token = tokenService.getBearerTokenFrom(request);
             LOGGER.info("Token: {}", token);

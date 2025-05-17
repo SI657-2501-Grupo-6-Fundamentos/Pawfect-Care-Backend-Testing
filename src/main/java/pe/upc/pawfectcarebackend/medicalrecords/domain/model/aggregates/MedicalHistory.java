@@ -17,7 +17,6 @@ import java.util.List;
 @Entity
 public class MedicalHistory extends AuditableAbstractAggregateRoot<MedicalHistory> {
 
-
     @NotBlank
     private String notes;
 
